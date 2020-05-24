@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <title>Registration form </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+     function validation()
+     {
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+       if(document.myform.email.value.match(mailformat)==null)
+       {
+         alert("Enter valid email ID")
+         document.myform.email.focus()
+         return false;
+       }
+       var m=document.myform.mark.value;
+       if(isNaN(m)||m>360)
+       {
+         alert("Please enter correct marks")
+         document.myform.mark.focus()
+         return false;
+       }
+       var g=document.myform.gender.value;
+       if(g!=male||g!=female||g!=others)
+       {
+         alert("Please enter your gender")
+         document.myform.mark.focus()
+         return false;
+       }
+       return (true);
+     }
+    </script>
+</head>
+<body>
+  <div id="left">
+    
+  </div>
+  <div id="center">
+      <h2 style="color: rgb(3, 6, 51);"><b>Student Registration Form</b></h2><hr><br>
+      <form action="display.php" method="POST" name="myform" onsubmit="return(validation())"> 
+          <B>Student Name</B><br>
+        <input type="text" placeholder="Enter Name" name="name" class="data" required><br>
+         <br> <B>Email Address</B><br>
+        <input type="text" placeholder="Enter Email" name="email" class="data"><br>
+        <br> <B>Marks</B><br>
+        <input type="text" placeholder="Out of 360" name="mark" required><br>
+        <br> <B>Date of birth</B><br>
+        <input type="date" placeholder="dd-mm-yyyy" name="date" required><br>
+        <br> <B>Gender</B><br>
+        <input type="radio" name="gender"value="male">Male
+        <input type="radio"name="gender"value="female">Female
+        <input type="radio"name="gender"value="others">Others
+        <br><br>
+        <input type="submit" class="data" style="background-color:rgb(3, 6, 51) ;color: white;width: 100%;height: 30px; border: 0;cursor: pointer;" value="Register">
+       </form>
+          
+  
+  </div>
+  <div id="right">
+  
+  </div>
+</body>

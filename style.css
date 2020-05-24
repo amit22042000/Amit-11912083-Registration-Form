@@ -1,0 +1,54 @@
+#first
+{
+
+    background-color: #D9D9D9 ;
+    margin: 0;
+}
+.data
+{
+    width: 90%;
+    padding: 2px;
+    
+}
+#left
+{
+    width:20%;
+   
+    min-height: 500px;
+    float: left;
+    margin-left:10px;
+
+
+}
+#center
+{
+   width:50%;
+    background-image:linear-gradient(#D8DCDC,#F4F7F7);
+    box-shadow: 0px 0px 30px grey;
+    float: left;
+    text-align: left;
+    min-height: 500px;
+    margin: 20px;
+    font-size: 110%;
+    margin-top: 70px;
+    margin-right: 30px;
+    padding:20px 20px 20px 20px;
+    font-family: 'Montserrat', sans-serif;
+  
+}
+#right
+{
+    width: 20%;
+    float: left;
+    min-height: 500px;
+
+}
+body
+{
+
+    background-image: url(2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+   
+}
